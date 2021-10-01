@@ -1,9 +1,6 @@
-const calc = (pricipal, interest, years) => {
-    callback(a + b);
-};
-
-test("calls callback with arguments added", () => {
-    const mockCallback = jest.fn();
-    doAdd(1, 2, mockCallback);
-    expect(mockCallback).toHaveBeenCalledWith(3);
+test('Always return same value', () => {
+    const myMock = jest.fn();
+    myMock.mockReturnValue(5500);
+    expect(myMock()).toBe(5500);
+    expect(myMock(5000, 2, 5)).toBe(5500);
 });
